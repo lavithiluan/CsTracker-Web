@@ -5,9 +5,9 @@ interface NavBarProps {
 
 export default function Navbar(props: NavBarProps) {
     const { active } = props;
-    const classActive = "border-b-2 border-pink-700"
+    const classActive = "border-b-2 border-purple-800"
     return(
-        <nav className="flex justify-between items-center p-6 bg-slate-900">
+        <nav className="flex justify-between items-center p-6 bg-gray-800">
             <h1 className="text-2xl font-bold">CsTracker</h1>
             <ul className="flex gap-50">
                 <li className={active === "dashboard" ? classActive:""}><a href="/dashboard">Dashboard</a></li>
