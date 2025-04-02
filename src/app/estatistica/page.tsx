@@ -1,7 +1,9 @@
 import CategoryItem from "@/components/category-item";
 import NavBar from "@/components/nav-bar";
+import SheetForm from "@/components/sheetForm";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
+import Link from "next/link";
 
 export default function EstatisticaPage() {
     return (
@@ -12,8 +14,7 @@ export default function EstatisticaPage() {
                 <div className="flex justify-between">
                     <h2 className="text-lg font-semibold">Jogadores</h2>
                     <Button>
-                        <Plus />
-                        Adicionar Novo Jogador
+                        <SheetForm />
                     </Button>
                 </div>
                 <CategoryItem />
