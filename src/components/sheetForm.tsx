@@ -20,7 +20,6 @@ export default function SheetForm() {
           <Input id="idade" className="col-span-3" />
         </div>
         <Button type="submit"> Adicionar </Button> 
-         
       </div>
     </form>
   );
