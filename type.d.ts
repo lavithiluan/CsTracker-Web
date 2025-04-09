@@ -1,6 +1,7 @@
-interface Category {
+interface Jogador {
     id: number,
     name: string,
-    team: string,
-    idade: number,
+    time: string,
+    sexo: "M" | "F";
+    dataNascimento: string,
 }

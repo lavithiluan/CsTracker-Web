@@ -1,5 +1,5 @@
 interface NavBarProps {
-    active: "dashboard" | "estatistica";
+    active: "dashboard" | "Jogadores";
 }
 
 
@@ -11,7 +11,7 @@ export default function Navbar(props: NavBarProps) {
             <h1 className="text-2xl font-bold">CsStats</h1>
             <ul className="flex gap-50">
                 <li className={active === "dashboard" ? classActive:""}><a href="/dashboard">Dashboard</a></li>
-                <li className={active === "estatistica" ? classActive:""}><a href="/estatistica">Estatistica</a></li>
+                <li className={active === "Jogadores" ? classActive:""}><a href="/Jogadores">Jogadores</a></li>
             </ul>
             <img className="size-12 rounded-full" src="https://avatars.githubusercontent.com/u/85400194?v=4" alt="" />
         </nav>

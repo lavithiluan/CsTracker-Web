@@ -1,22 +1,30 @@
-'use server'
-
 import { redirect } from "next/navigation"
 
-export async function createJogador(formData : FormData) {
+const API_URL = 'http://localhost:8080/players'
+
+export async  function getCategories() {
+    const response = await fetch(API_URL)
+    return await response.json()
+}
+
+export async function createCategory(inicialState: any, formData: FormData) {
     const data = {
-        nickname: formData.get('nickname'),
-        team: formData.get('team'),
+        name: formData.get('name'),
         idade: formData.get('idade'),
+        team: formData.get('team')
     }
 
-    await fetch('http://localhost:8080/players/cadastro', {
-        method: 'POST',
+    const options = {
+        method : 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(data)
-    })
+    }
 
-    redirect('/dashboard')
-     
+    fetch(API_URL, options)
+
+    redirect('/estatistica')
 }
+
+
