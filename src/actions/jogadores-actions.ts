@@ -1,30 +1,21 @@
-import { redirect } from "next/navigation"
+'use server'
 
-const API_URL = 'http://localhost:8080/players'
+import { redirect } from "next/navigation";
 
-export async  function getCategories() {
-    const response = await fetch(API_URL)
-    return await response.json()
-}
-
-export async function createCategory(inicialState: any, formData: FormData) {
+export async function createJogadores(formData: FormData) {
     const data = {
-        name: formData.get('name'),
-        idade: formData.get('idade'),
-        team: formData.get('team')
+        nickname: formData.get("nickname"),
+        sexo: formData.get("sexo"),
+        dataNascimento: formData.get("dataNascimento"), // tipo "2004-12-13"
+        time: formData.get("time")
     }
 
-    const options = {
-        method : 'POST',
+    await fetch("http://localhost:8080/jogadores/cadastro", {
+        method: "POST",
         headers: {
-            'Content-Type': 'application/json'
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(data)
-    }
-
-    fetch(API_URL, options)
-
-    redirect('/estatistica')
+    })
+    redirect("/jogadores")
 }
-
-
