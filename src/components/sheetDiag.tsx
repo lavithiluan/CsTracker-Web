@@ -7,8 +7,8 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import SheetForm from "./sheetForm";
 import { Plus } from "lucide-react";
+import SheetJogador from "./sheetJogador";
 
 export default function SheetDiag() {
   return (
@@ -17,9 +17,10 @@ export default function SheetDiag() {
       <SheetContent>
         <SheetTitle className="text-center mt-5"> Adicionar Jogadores </SheetTitle>
         <SheetHeader>
-          <SheetForm />
+          <SheetJogador />
         </SheetHeader>
       </SheetContent>
     </Sheet>
+    
   );
 }

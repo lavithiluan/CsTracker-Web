@@ -1,7 +1,12 @@
 interface Jogador {
     id: number,
-    name: string,
+    nickname: string,
     time: string,
     sexo: "M" | "F";
     dataNascimento: string,
+    kills: number,
+    deaths: number,
+    assists: number,
+    headshots: number,
+    accuracy: number,
 }
