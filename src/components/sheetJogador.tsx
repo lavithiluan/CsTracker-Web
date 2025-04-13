@@ -60,7 +60,7 @@ export default function SheetJogador() {
 
       <div className="grid grid-cols-4 gap-4 items-center">
         <Label htmlFor="headshots" className="text-right">
-          Tira na cabeca
+          Headshots
         </Label>
         <Input name="headshots" type="number" className="col-span-3" />
       </div>
@@ -69,17 +69,10 @@ export default function SheetJogador() {
         <Label htmlFor="accuracy" className="text-right">
           Precisao
         </Label>
-        <Input
-          name="accuracy"
-          type="number"
-          step="0.1"
-          className="col-span-3"
-        />
+        <Input name="accuracy" type="number" step="0.1" className="col-span-3"/>
       </div>
-
-      <Button type="submit" className="mt-85">
-        Adicionar Jogador
-      </Button>
+      
+      <Button type="submit" className="mt-85"> Adicionar Jogador </Button>
     </form>
   );
 }

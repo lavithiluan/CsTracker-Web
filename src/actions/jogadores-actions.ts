@@ -28,5 +28,5 @@ export async function createJogadores(formData: FormData) {
         },
         body: JSON.stringify(data)
     })
-    redirect("/jogadores")
+    redirect("/Jogadores")
 }
